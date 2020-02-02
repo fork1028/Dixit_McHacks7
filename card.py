@@ -1,6 +1,3 @@
-from server import Session
-
-
 class Card(object):
     def __init__(self):
         self.card_no = 1

@@ -31,6 +31,7 @@ while True:
 
     # send a thank you message to the client.
     c.send(str.encode('Thank you for connecting'))
-
+    temp = c.recv(1024)
+    print('received {}'.format(temp))
     # Close the connection with the client
     c.close()
