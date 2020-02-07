@@ -13,7 +13,7 @@ class Client():
         # Define the port on which you want to connect
         port = 12345
         # connect to the server on local computer
-        self.s.connect(('192.168.0.1', port))
+        self.s.connect(('192.168.1.1', port))
         self.s.send(str.encode('ready'))
 
 

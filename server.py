@@ -40,7 +40,7 @@ class Server(object):
 
         print("Socket successfully created")
         port = 12345
-        self.s.bind(('127.0.0.1', port))
+        self.s.bind(('192.168.1.1', port))
         print("socket binded to {}".format(port))
         # put the socket into listening mode
         self.s.listen(5)
@@ -88,7 +88,7 @@ class Server(object):
             self.client_lst[i].send(str.encode('{} {}'.format(request_type, request_content)))
             output = str(self.client_lst[i].recv(1024))
             # right now just print output, but suppose to check output
-            print(output)
+            print('received outputs:\n', output)
             self.process_output(output)
 
 
